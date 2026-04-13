@@ -1,5 +1,5 @@
 {
-    "about": "I’m a developer passionate about creating aesthetically pleasing UI/UX. I enjoy building interactive and user-friendly solutions. I have experience with HTML, CSS, JavaScript, and modern development tools.",
+    "about": "Passionate Multimedia and Information Technology student with a focus on Frontend Engineering and UI/UX Design. Beyond coding with HTML, CSS, and JavaScript, I bring a creative edge through my skills in Photography, Videography, and Prompt Engineering. My experience as an Office Helpdesk at PT. Telkom Akses has also sharpened my technical troubleshooting and network maintenance abilities, making me a versatile asset for any tech team.",
     "skills": [
         {
             "name": "HTML/CSS",
@@ -9,17 +9,17 @@
         {
             "name": "JavaScript",
             "icon": "fa-js-square",
-            "level": 75
+            "level": 70
         },
         {
             "name": "React",
             "icon": "fa-react",
-            "level": 60
+            "level": 50
         },
         {
             "name": "Node.js",
             "icon": "fa-server",
-            "level": 60
+            "level": 50
         },
         {
             "name": "Figma",
@@ -43,13 +43,19 @@
             "title": "Project 2: App Mobile Clone",
             "description": "Prototyping UI untuk app belanja. Fokus pada user experience.",
             "image": "images/project2.jpg",
-            "link": "https://github.com/khuzaima/project2"
+            "link": ""
         },
         {
             "title": "Project 3: Dashboard Analytics",
             "description": "Visualisasi data interaktif pakai Chart.js.",
             "image": "images/project3.jpg",
-            "link": "https://github.com/khuzaima/project3"
+            "link": ""
+        },
+        {
+            "title": "Project 4: App Mobile Clone",
+            "description": "Prototyping UI untuk app belanja. Fokus pada user experience.",
+            "image": "images/project2.jpg",
+            "link": ""
         }
     ]
 }
