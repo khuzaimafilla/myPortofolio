@@ -37,35 +37,18 @@
             "title": "SMEs Website ~ heavenly.fd",
             "description": "Static SMEs Website using HTML, CSS, & JavaScript.",
             "image": "images/project/heavenly.png",
-            "images": [
-                "images/project/heavenly.png",
-                "images/project/heavenly-slide1.png",
-                "images/project/heavenly-slide2.png",
-                "images/project/heavenly-slide3.png"
-            ],
             "link": "https://github.com/khuzaima/project1"
         },
         {
             "title": "Project 2: App Mobile Clone",
             "description": "Prototyping UI untuk app belanja. Fokus pada user experience.",
-            "image": "images/project/project2.jpg",
-            "images": [
-                "images/project/project2.jpg",
-                "images/project/project2-slide1.png",
-                "images/project/project2-slide2.png",
-                "images/project/project2-slide3.png"
-            ],
+            "image": "images/project2.jpg",
             "link": "https://github.com/khuzaima/project2"
         },
         {
             "title": "Project 3: Dashboard Analytics",
             "description": "Visualisasi data interaktif pakai Chart.js.",
-            "image": "images/project/project3.jpg",
-            "images": [
-                "images/project/project3.jpg",
-                "images/project/project3-slide1.png",
-                "images/project/project3-slide2.png"
-            ],
+            "image": "images/project3.jpg",
             "link": "https://github.com/khuzaima/project3"
         }
     ]
