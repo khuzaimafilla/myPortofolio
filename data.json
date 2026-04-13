@@ -7,7 +7,7 @@
         { "name": "SME's Web Dev", "icon": "fa-store", "level": 70 },
         { "name": "Cinematography", "icon": "fa-camera", "level": 80 },
         { "name": "Video Editor", "icon": "fa-film", "level": 80 },
-        { "name": "Prompt Engineer", "icon": "fa-robot", "level": 70 }
+        { "name": "AI Prompter", "icon": "fa-robot", "level": 70 }
     ],
     "projects": [
         {
