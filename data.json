@@ -4,11 +4,10 @@
     "skills": [
         { "name": "Frontend Engineer", "icon": "fa-code", "level": 85 },
         { "name": "UI Designer", "icon": "fa-pen-nib", "level": 90 },
-        { "name": "SME's Web Dev", "icon": "fa-store", "level": 90 },
-        { "name": "Videographer", "icon": "fa-video", "level": 80 },
-        { "name": "Photographer", "icon": "fa-camera", "level": 80 },
-        { "name": "Video Editor", "icon": "fa-film", "level": 75 },
-        { "name": "Prompt Engineer", "icon": "fa-robot", "level": 85 }
+        { "name": "SME's Web Dev", "icon": "fa-store", "level": 70 },
+        { "name": "Cinematography", "icon": "fa-camera", "level": 80 },
+        { "name": "Video Editor", "icon": "fa-film", "level": 80 },
+        { "name": "Prompt Engineer", "icon": "fa-robot", "level": 70 }
     ],
     "projects": [
         {
@@ -34,9 +33,9 @@
         }
     ],
     "contact": {
-        "linkedin": "https://linkedin.com/in/yourprofile",
-        "instagram": "https://instagram.com/yourhandle",
-        "email": "mailto:youremail@gmail.com",
-        "whatsapp": "https://wa.me/6281234567890"
+        "linkedin": "https://linkedin.com/in/khuzaima-filla",
+        "instagram": "https://instagram.com/khuzaimafilla",
+        "email": "mailto:khuzaimafilla@gmail.com",
+        "whatsapp": "https://wa.me/6282132517964"
     }
 }
