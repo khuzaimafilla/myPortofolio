@@ -9,27 +9,27 @@
         {
             "name": "JavaScript",
             "icon": "fa-js-square",
-            "level": 85
+            "level": 75
         },
         {
             "name": "React",
             "icon": "fa-react",
-            "level": 80
+            "level": 60
         },
         {
             "name": "Node.js",
             "icon": "fa-server",
-            "level": 75
+            "level": 60
         },
         {
             "name": "Figma",
             "icon": "fa-paint-brush",
-            "level": 70
+            "level": 90
         },
         {
             "name": "Git",
             "icon": "fa-git-alt",
-            "level": 95
+            "level": 90
         }
     ],
     "projects": [
