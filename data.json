@@ -2,7 +2,7 @@
     "cv": "files/CV_Khuzaima_Filla_Januartha.pdf",
     "about": "Passionate Multimedia and Information Technology student with a focus on Frontend Engineering and UI/UX Design. Beyond coding with HTML, CSS, and JavaScript, I bring a creative edge through my skills in Photography, Videography, and Prompt Engineering. My experience as an Office Helpdesk at PT. Telkom Akses has also sharpened my technical troubleshooting and network maintenance abilities, making me a versatile asset for any tech team.",
     "skills": [
-        { "name": "Frontend Engineer", "icon": "fa-code", "level": 85 },
+        { "name": "FE Engineer", "icon": "fa-code", "level": 85 },
         { "name": "UI Designer", "icon": "fa-pen-nib", "level": 90 },
         { "name": "SME's Web Dev", "icon": "fa-store", "level": 70 },
         { "name": "Cinematography", "icon": "fa-camera", "level": 80 },
