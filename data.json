@@ -1,61 +1,42 @@
 {
+    "cv": "files/CV_Khuzaima_Filla_Januartha.pdf",
     "about": "Passionate Multimedia and Information Technology student with a focus on Frontend Engineering and UI/UX Design. Beyond coding with HTML, CSS, and JavaScript, I bring a creative edge through my skills in Photography, Videography, and Prompt Engineering. My experience as an Office Helpdesk at PT. Telkom Akses has also sharpened my technical troubleshooting and network maintenance abilities, making me a versatile asset for any tech team.",
     "skills": [
-        {
-            "name": "HTML/CSS",
-            "icon": "fa-html5",
-            "level": 90
-        },
-        {
-            "name": "JavaScript",
-            "icon": "fa-js-square",
-            "level": 70
-        },
-        {
-            "name": "React",
-            "icon": "fa-react",
-            "level": 50
-        },
-        {
-            "name": "Node.js",
-            "icon": "fa-server",
-            "level": 50
-        },
-        {
-            "name": "Figma",
-            "icon": "fa-paint-brush",
-            "level": 90
-        },
-        {
-            "name": "Git",
-            "icon": "fa-git-alt",
-            "level": 90
-        }
+        { "name": "Frontend Engineer", "icon": "fa-code", "level": 85 },
+        { "name": "UI Designer", "icon": "fa-pen-nib", "level": 90 },
+        { "name": "SME's Web Dev", "icon": "fa-store", "level": 90 },
+        { "name": "Videographer", "icon": "fa-video", "level": 80 },
+        { "name": "Photographer", "icon": "fa-camera", "level": 80 },
+        { "name": "Video Editor", "icon": "fa-film", "level": 75 },
+        { "name": "Prompt Engineer", "icon": "fa-robot", "level": 85 }
     ],
     "projects": [
         {
-            "title": "SMEs Website ~ heavenly.fd",
+            "title": "heavenly.fd — SMEs Website",
             "description": "Static SMEs Website using HTML, CSS, & JavaScript.",
             "image": "images/project/heavenly.png",
-            "link": "https://hvnly.vercel.app/"
+            "link": "https://hvnly.vercel.app/",
+            "category": "Recent Static Webs"
         },
         {
-            "title": "Project 2: App Mobile Clone",
+            "title": "App Mobile Clone",
             "description": "Prototyping UI untuk app belanja. Fokus pada user experience.",
             "image": "images/project2.jpg",
-            "link": ""
+            "link": "",
+            "category": "UI/UX"
         },
         {
-            "title": "Project 3: Dashboard Analytics",
+            "title": "Dashboard Analytics",
             "description": "Visualisasi data interaktif pakai Chart.js.",
             "image": "images/project3.jpg",
-            "link": ""
-        },
-        {
-            "title": "Project 4: App Mobile Clone",
-            "description": "Prototyping UI untuk app belanja. Fokus pada user experience.",
-            "image": "images/project2.jpg",
-            "link": ""
+            "link": "",
+            "category": "Recent Static Webs"
         }
-    ]
+    ],
+    "contact": {
+        "linkedin": "https://linkedin.com/in/yourprofile",
+        "instagram": "https://instagram.com/yourhandle",
+        "email": "mailto:youremail@gmail.com",
+        "whatsapp": "https://wa.me/6281234567890"
+    }
 }
