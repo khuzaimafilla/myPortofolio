@@ -20,6 +20,27 @@ export interface Skill {
   description?: string;
 }
 
+export interface EducationItem {
+  institution: string;
+  major: string;
+  period: string;
+  logo: string; // e.g., "/images/logos/polinema.png"
+}
+
+export interface ExperienceItem {
+  company: string;
+  role: string;
+  period: string;
+  logo: string; // e.g., "/images/logos/indolakto.png"
+}
+
+export interface OrganizationItem {
+  organization: string;
+  role: string;
+  period: string;
+  logo: string; // e.g., "/images/logos/bem.png"
+}
+
 export interface PortfolioData {
   name: string;
   title: string;
@@ -30,6 +51,9 @@ export interface PortfolioData {
   stats: { label: string; value: string }[];
   skills: Skill[];
   projects: Project[];
+  education: EducationItem[];
+  experience: ExperienceItem[];
+  organization: OrganizationItem[];
   contact: {
     linkedin: string;
     instagram: string;
@@ -38,6 +62,51 @@ export interface PortfolioData {
     github?: string;
   };
 }
+
+export const educationList: EducationItem[] = [
+  {
+    institution: "Telkom Vocational High School Malang",
+    major: "Software Engineering",
+    period: "2020 - 2023",
+    logo: "/images/logos/smk-telkom.png"
+  },
+  {
+    institution: "State Polytechnic of Malang (POLINEMA)",
+    major: "B.A.S. (D4) in Business Information Systems",
+    period: "2023 - Present",
+    logo: "/images/logos/polinema.png"
+  }
+];
+
+export const industryExperienceList: ExperienceItem[] = [
+  {
+    company: "PDAM Delta Tirta Sidoarjo Regency",
+    role: "Frontend Web Developer",
+    period: "Jun 2022 - Aug 2022",
+    logo: "/images/logos/pdam.png"
+  },
+  {
+    company: "PT Telkom Akses Malang",
+    role: "Office Helpdesk Assistant",
+    period: "Sep 2022 - Nov 2022",
+    logo: "/images/logos/telkom-akses.png"
+  },
+  {
+    company: "PT Indolakto Purwosari",
+    role: "Frontend Web Developer",
+    period: "Jul 2020 - Present",
+    logo: "/images/logos/indolakto.png"
+  }
+];
+
+export const organizationList: OrganizationItem[] = [
+  {
+    organization: "Student Executive Board (BEM) POLINEMA",
+    role: "Staff of Ministry of Communication and Information",
+    period: "May 2024 - Dec 2024",
+    logo: "/images/logos/bem.png"
+  }
+];
 
 export const portfolioData: PortfolioData = {
   name: "Khuzaima Filla Januartha",
@@ -52,6 +121,9 @@ export const portfolioData: PortfolioData = {
     { label: "Client Satisfaction", value: "100%" },
     { label: "Experience", value: "2+ Years" },
   ],
+  education: educationList,
+  experience: industryExperienceList,
+  organization: organizationList,
   skills: [
     { name: "Frontend Engineering", category: "Frontend", icon: "Code2", level: 88, description: "React, Next.js, Astro, TypeScript, Tailwind CSS" },
     { name: "UI/UX Design", category: "Design", icon: "Figma", level: 90, description: "Figma, Wireframing, Design Systems, Prototyping" },

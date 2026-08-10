@@ -6,13 +6,13 @@ import { portfolioData } from '@data/portfolioData';
   <div class="max-w-7xl mx-auto">
     <!-- Section Header -->
     <div class="flex flex-col items-center text-center mb-16">
-      <span class="text-xs font-heading font-semibold tracking-widest text-accent-gold uppercase mb-2">Philosophy & Background</span>
-      <h2 class="font-heading font-bold text-3xl sm:text-4xl text-white tracking-tight">About Me</h2>
+      <span class="text-xs font-heading font-semibold tracking-widest text-accent-gold uppercase mb-2">Philosophy & Journey</span>
+      <h2 class="font-heading font-bold text-3xl sm:text-4xl text-white tracking-tight">About & Experience</h2>
       <div class="w-12 h-1 bg-gradient-to-r from-accent-red to-accent-gold rounded-full mt-4"></div>
     </div>
 
-    <!-- Main Content Card -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+    <!-- Top Card: Bio Summary & Focus Pillars -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-16">
       <!-- Bio Summary -->
       <div class="lg:col-span-8 bg-slate-900/60 backdrop-blur-md border border-white/10 rounded-2xl p-8 sm:p-10 flex flex-col justify-between shadow-xl">
         <div>
@@ -24,16 +24,27 @@ import { portfolioData } from '@data/portfolioData';
           </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6 border-t border-white/10 text-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-white/10 text-sm">
           <div class="flex items-center gap-3">
-            <div class="w-2 h-2 rounded-full bg-accent-gold"></div>
-            <span class="text-slate-400">Education:</span>
-            <span class="text-white font-medium">Information Systems</span>
+            <div class="w-2.5 h-2.5 rounded-full bg-accent-gold shadow-sm shadow-accent-gold/50"></div>
+            <div>
+              <span class="text-slate-400 text-xs block">Education</span>
+              <span class="text-white font-medium">B.A.S. Info Systems</span>
+            </div>
           </div>
           <div class="flex items-center gap-3">
-            <div class="w-2 h-2 rounded-full bg-accent-red"></div>
-            <span class="text-slate-400">Industry Exp:</span>
-            <span class="text-white font-medium">PT Telkom Akses</span>
+            <div class="w-2.5 h-2.5 rounded-full bg-accent-red shadow-sm shadow-accent-red/50"></div>
+            <div>
+              <span class="text-slate-400 text-xs block">Industry Role</span>
+              <span class="text-white font-medium">Frontend Developer</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-sm shadow-emerald-400/50"></div>
+            <div>
+              <span class="text-slate-400 text-xs block">Leadership</span>
+              <span class="text-white font-medium">BEM POLINEMA</span>
+            </div>
           </div>
         </div>
       </div>
@@ -46,7 +57,7 @@ import { portfolioData } from '@data/portfolioData';
           </div>
           <h4 class="font-heading font-bold text-lg text-white mb-1">Frontend Engineering</h4>
           <p class="text-slate-400 text-xs leading-relaxed">
-            Crafting pixel-perfect, responsive, and performance-optimized web architectures using Astro, React, and Tailwind CSS.
+            Crafting pixel-perfect, responsive, and performance-optimized web architectures using Laravel, Next, Astro, React, and Tailwind CSS.
           </p>
         </div>
 
@@ -61,5 +72,158 @@ import { portfolioData } from '@data/portfolioData';
         </div>
       </div>
     </div>
+
+    <!-- Credentials Grid (Industry Experience, Education, Organization) -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      
+      <!-- 1. Industry Experience -->
+      <div class="bg-slate-900/40 backdrop-blur-md border border-white/10 rounded-3xl p-6 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-3 mb-6 pb-4 border-b border-white/10">
+            <div class="w-9 h-9 rounded-xl bg-accent-red/15 border border-accent-red/30 flex items-center justify-center text-accent-red">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m46 0v2m-6-2h6" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-lg text-white">Industry Experience</h3>
+              <p class="text-xs text-slate-400">Professional Work & Internships</p>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            {portfolioData.experience.map((item) => (
+              <div class="group relative bg-slate-950/60 border border-white/5 hover:border-accent-red/40 rounded-2xl p-4 transition-all duration-300 hover:-translate-y-0.5">
+                <div class="flex items-start gap-3.5">
+                  <!-- Logo Container with Fallback Badge -->
+                  <div class="relative w-11 h-11 rounded-xl bg-slate-800 border border-white/10 flex items-center justify-center overflow-hidden shrink-0 group-hover:border-accent-red/50 transition-colors">
+                    <img 
+                      src={item.logo} 
+                      alt={item.company}
+                      class="w-full h-full object-contain p-1.5"
+                      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                    />
+                    <div class="hidden absolute inset-0 bg-gradient-to-br from-accent-red/20 to-slate-900 font-heading font-bold text-xs text-accent-red items-center justify-center uppercase">
+                      {item.company.charAt(0)}
+                    </div>
+                  </div>
+
+                  <div class="flex-1 min-w-0">
+                    <div class="flex items-center justify-between gap-2 mb-1">
+                      <h4 class="font-heading font-bold text-sm text-white truncate group-hover:text-accent-red transition-colors">
+                        {item.company}
+                      </h4>
+                    </div>
+                    <p class="text-xs text-slate-300 font-medium mb-2">{item.role}</p>
+                    <span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-white/5 text-slate-400 border border-white/10">
+                      {item.period}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Education -->
+      <div class="bg-slate-900/40 backdrop-blur-md border border-white/10 rounded-3xl p-6 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-3 mb-6 pb-4 border-b border-white/10">
+            <div class="w-9 h-9 rounded-xl bg-accent-gold/15 border border-accent-gold/30 flex items-center justify-center text-accent-gold">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-lg text-white">Education</h3>
+              <p class="text-xs text-slate-400">Academic Qualifications</p>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            {portfolioData.education.map((item) => (
+              <div class="group relative bg-slate-950/60 border border-white/5 hover:border-accent-gold/40 rounded-2xl p-4 transition-all duration-300 hover:-translate-y-0.5">
+                <div class="flex items-start gap-3.5">
+                  <!-- Logo Container with Fallback Badge -->
+                  <div class="relative w-11 h-11 rounded-xl bg-slate-800 border border-white/10 flex items-center justify-center overflow-hidden shrink-0 group-hover:border-accent-gold/50 transition-colors">
+                    <img 
+                      src={item.logo} 
+                      alt={item.institution}
+                      class="w-full h-full object-contain p-1.5"
+                      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                    />
+                    <div class="hidden absolute inset-0 bg-gradient-to-br from-accent-gold/20 to-slate-900 font-heading font-bold text-xs text-accent-gold items-center justify-center uppercase">
+                      {item.institution.charAt(0)}
+                    </div>
+                  </div>
+
+                  <div class="flex-1 min-w-0">
+                    <h4 class="font-heading font-bold text-sm text-white group-hover:text-accent-gold transition-colors leading-tight mb-1">
+                      {item.institution}
+                    </h4>
+                    <p class="text-xs text-slate-300 font-medium mb-2">{item.major}</p>
+                    <span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-white/5 text-slate-400 border border-white/10">
+                      {item.period}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Leadership & Organization -->
+      <div class="bg-slate-900/40 backdrop-blur-md border border-white/10 rounded-3xl p-6 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-3 mb-6 pb-4 border-b border-white/10">
+            <div class="w-9 h-9 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-lg text-white">Organization</h3>
+              <p class="text-xs text-slate-400">Leadership & Social Experience</p>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            {portfolioData.organization.map((item) => (
+              <div class="group relative bg-slate-950/60 border border-white/5 hover:border-emerald-500/40 rounded-2xl p-4 transition-all duration-300 hover:-translate-y-0.5">
+                <div class="flex items-start gap-3.5">
+                  <!-- Logo Container with Fallback Badge -->
+                  <div class="relative w-11 h-11 rounded-xl bg-slate-800 border border-white/10 flex items-center justify-center overflow-hidden shrink-0 group-hover:border-emerald-500/50 transition-colors">
+                    <img 
+                      src={item.logo} 
+                      alt={item.organization}
+                      class="w-full h-full object-contain p-1.5"
+                      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                    />
+                    <div class="hidden absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-slate-900 font-heading font-bold text-xs text-emerald-400 items-center justify-center uppercase">
+                      {item.organization.charAt(0)}
+                    </div>
+                  </div>
+
+                  <div class="flex-1 min-w-0">
+                    <h4 class="font-heading font-bold text-sm text-white group-hover:text-emerald-400 transition-colors leading-tight mb-1">
+                      {item.organization}
+                    </h4>
+                    <p class="text-xs text-slate-300 font-medium mb-2">{item.role}</p>
+                    <span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-white/5 text-slate-400 border border-white/10">
+                      {item.period}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
+
