@@ -92,7 +92,7 @@ export const portfolioData: PortfolioData = {
       title: "Mobile Shopping App Prototype",
       subtitle: "E-Commerce UI/UX Study",
       description: "Interactive mobile shopping app prototype focusing on micro-interactions, seamless checkout user flows, and modern visual hierarchy.",
-      image: "/images/project2.jpg",
+      image: "/images/project/mobile-app.png",
       link: "",
       category: "UI/UX",
       tags: ["Figma", "User Research", "Prototyping", "Design System"],
