@@ -74,7 +74,7 @@ export const educationList: EducationItem[] = [
     institution: "State Polytechnic of Malang (POLINEMA)",
     major: "B.A.S. (D4) in Business Information Systems",
     period: "2023 - Present",
-    logo: "/images/logos/polinema.png"
+    logo: "/images/logos/Logo-Polinema.png"
   }
 ];
 
@@ -104,7 +104,7 @@ export const organizationList: OrganizationItem[] = [
     organization: "Student Executive Board (BEM) POLINEMA",
     role: "Staff of Ministry of Communication and Information",
     period: "May 2024 - Dec 2024",
-    logo: "/images/logos/bem.png"
+    logo: "/images/logos/bem-polinema.png"
   }
 ];
 
