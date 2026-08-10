@@ -94,7 +94,7 @@ export const industryExperienceList: ExperienceItem[] = [
   {
     company: "PT Indolakto Purwosari",
     role: "Frontend Web Developer",
-    period: "Jul 2020 - Present",
+    period: "Jul 2026 - Present",
     logo: "/images/logos/indolakto.png"
   }
 ];
@@ -135,13 +135,13 @@ export const portfolioData: PortfolioData = {
   projects: [
     {
       id: "krtrade",
-      title: "KRTrade — Trade Journal",
-      subtitle: "Professional Trading Analytics Platform",
-      description: "A high-performance trading journal application designed for traders to record, evaluate, and optimize their trades with interactive performance metrics.",
-      image: "/images/project/krtrade.jpg",
-      link: "https://github.com/khuzaimafilla",
+      title: "KRTrade — Kronik & Rewards",
+      subtitle: "Trading Analytics & Community Platform",
+      description: "A high-performance trading analytics and community platform designed for traders to evaluate performance, track percentage-based equity growth, and build disciplined trading habits with real-time community leaderboards.",
+      image: "/images/project/krtrade.png",
+      link: "https://krtrade.vercel.app/",
       category: "Web App",
-      tags: ["Astro", "React", "TypeScript", "Tailwind CSS"],
+      tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Prisma", "Neon Postgres"],
       featured: true,
       bentoSpan: "col-span-1 md:col-span-2 row-span-2",
       accentColor: "#EDBB00"
