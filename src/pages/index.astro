@@ -1,0 +1,44 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Navbar from '@components/layout/Navbar.astro';
+import Footer from '@components/layout/Footer.astro';
+import Hero from '@components/sections/hero/Hero.astro';
+import About from '@components/sections/about/About.astro';
+import Skills from '@components/sections/skills/Skills.astro';
+import ProjectsBento from '@components/sections/projects/ProjectsBento.astro';
+import Contact from '@components/sections/contact/Contact.astro';
+import FadeIn from '@components/motion/FadeIn';
+---
+
+<Layout>
+  <!-- Fixed Navbar -->
+  <Navbar />
+
+  <!-- Hero Section -->
+  <FadeIn client:visible direction="up" delay={0.1}>
+    <Hero />
+  </FadeIn>
+
+  <!-- About Section -->
+  <FadeIn client:visible direction="up" delay={0.1}>
+    <About />
+  </FadeIn>
+
+  <!-- Skills Section -->
+  <FadeIn client:visible direction="up" delay={0.1}>
+    <Skills />
+  </FadeIn>
+
+  <!-- Projects Bento Section -->
+  <FadeIn client:visible direction="up" delay={0.1}>
+    <ProjectsBento />
+  </FadeIn>
+
+  <!-- Contact Section -->
+  <FadeIn client:visible direction="up" delay={0.1}>
+    <Contact />
+  </FadeIn>
+
+  <!-- Footer -->
+  <Footer />
+</Layout>

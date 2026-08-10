@@ -1,0 +1,78 @@
+---
+import CommandPalette from '@components/ui/CommandPalette';
+import { portfolioData } from '@data/portfolioData';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = `${portfolioData.name} — ${portfolioData.title}`,
+  description = portfolioData.bio 
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+
+    <!-- Google Fonts: Montserrat & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..900;1,300..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-background text-slate-100 font-sans antialiased min-h-screen selection:bg-accent-red selection:text-white relative overflow-x-hidden">
+    <!-- Ambient Backdrop Effects -->
+    <div class="fixed top-0 left-0 w-full h-full pointer-events-none -z-10 overflow-hidden">
+      <!-- Glow Orbs -->
+      <div class="absolute -top-[20%] left-[10%] w-[500px] h-[500px] bg-accent-red/10 rounded-full blur-[140px] opacity-60"></div>
+      <div class="absolute top-[40%] right-[5%] w-[450px] h-[450px] bg-accent-gold/10 rounded-full blur-[160px] opacity-40"></div>
+      <div class="absolute bottom-[-10%] left-[30%] w-[600px] h-[600px] bg-accent-red/5 rounded-full blur-[180px] opacity-50"></div>
+      
+      <!-- Subtle Grid Overlay -->
+      <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+    </div>
+
+    <!-- Hydrated Command Palette (Keyboard Trigger Cmd+K) -->
+    <CommandPalette client:idle />
+
+    <!-- Main Content Container -->
+    <slot />
+
+    <style is:global>
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f172a;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(237, 187, 0, 0.4);
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+---
+import { portfolioData } from '@data/portfolioData';
+import Lanyard3D from '@components/ui/Lanyard3D';
+---
+
+<section id="hero" class="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 lg:px-8" style="overflow: visible;">
+  
+  <!-- Ambient Background Glows -->
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-[130px] opacity-10"
+      style="background: radial-gradient(circle, #A50044, transparent 70%);" />
+    <div class="absolute bottom-1/3 right-1/4 w-72 h-72 rounded-full blur-[100px] opacity-8"
+      style="background: radial-gradient(circle, #EDBB00, transparent 70%);" />
+  </div>
+
+  <div class="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center relative z-10">
+    
+    <!-- ── Left Column: Typography & CTAs ── -->
+    <div class="lg:col-span-7 flex flex-col justify-center text-left">
+
+      <!-- Status Badge -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-white/10 text-xs font-medium text-slate-300 w-fit mb-6 shadow-sm">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+        </span>
+        <span>Available for Projects & Frontend Roles</span>
+      </div>
+
+      <!-- Main Headline (Montserrat) -->
+      <h1 class="font-heading font-extrabold text-4xl sm:text-6xl lg:text-7xl tracking-tight text-white leading-[1.1] mb-6">
+        Crafting <span class="bg-gradient-to-r from-accent-gold via-yellow-200 to-amber-400 bg-clip-text text-transparent">Digital</span> Interfaces That Inspire.
+      </h1>
+
+      <!-- Role / Identity -->
+      <p class="font-heading font-semibold text-lg sm:text-xl text-accent-red mb-4">
+        {portfolioData.name} — <span class="text-slate-300 font-normal">{portfolioData.title}</span>
+      </p>
+
+      <!-- Subtitle (Poppins) -->
+      <p class="font-sans text-slate-400 text-base sm:text-lg max-w-2xl leading-relaxed mb-8">
+        {portfolioData.bio}
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap items-center gap-4">
+        <a href="#projects"
+          class="px-7 py-3.5 rounded-full bg-slate-100 hover:bg-white text-slate-950 font-heading font-bold text-sm shadow-xl shadow-white/5 transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center gap-2">
+          View Bento Projects
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+
+        <a href={portfolioData.cvUrl} download
+          class="px-7 py-3.5 rounded-full bg-slate-900 border border-white/10 hover:border-accent-gold/50 text-slate-200 hover:text-white font-heading font-semibold text-sm transition-all hover:bg-slate-800 flex items-center gap-2">
+          <svg class="w-4 h-4 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+          </svg>
+          Download CV
+        </a>
+      </div>
+
+      <!-- Quick Metrics Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-12 pt-8 border-t border-white/10">
+        {portfolioData.stats.map((stat) => (
+          <div>
+            <div class="font-heading font-bold text-2xl sm:text-3xl text-white tracking-tight">{stat.value}</div>
+            <div class="text-xs text-slate-400 mt-1">{stat.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- ── Right Column: Interactive Hanging Lanyard ID Card ── -->
+    <!--
+      overflow-visible is KEY — the card must be able to swing outside this column.
+      No glass wrapper frame around it — the lanyard hangs freely.
+    -->
+    <div class="lg:col-span-5 flex justify-center lg:justify-end items-start pt-8 lg:pt-0"
+      style="overflow: visible;">
+      
+      <!-- The component renders its own SVG strap that exits the top -->
+      <Lanyard3D
+        client:visible
+        name={portfolioData.name}
+        title={portfolioData.title}
+        location="Surabaya, Indonesia"
+        specialty="Web & UI Systems"
+        avatarUrl="/images/profile.png"
+        fallbackAvatarUrl="https://ui-avatars.com/api/?name=Khuzaima+Filla&background=A50044&color=fff&size=256"
+      />
+    </div>
+
+  </div>
+</section>

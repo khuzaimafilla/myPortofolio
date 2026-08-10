@@ -1,0 +1,115 @@
+---
+import { portfolioData } from '@data/portfolioData';
+---
+
+<section id="projects" class="py-24 relative px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto">
+    <!-- Section Header -->
+    <div class="flex flex-col items-center text-center mb-16">
+      <span class="text-xs font-heading font-semibold tracking-widest text-accent-gold uppercase mb-2">Selected Works</span>
+      <h2 class="font-heading font-bold text-3xl sm:text-4xl text-white tracking-tight">Featured Projects</h2>
+      <p class="text-slate-400 text-sm max-w-xl mt-2 font-sans">
+        Explorations in full-stack engineering, interactive UI components, and design systems.
+      </p>
+      <div class="w-12 h-1 bg-gradient-to-r from-accent-red to-accent-gold rounded-full mt-4"></div>
+    </div>
+
+    <!-- Asymmetrical Bento Box Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[340px]">
+      {portfolioData.projects.map((project) => {
+        const hasLink = Boolean(project.link && project.link.trim() !== '');
+        return (
+          <div
+            class={`group relative bg-slate-900/70 backdrop-blur-md border border-white/10 hover:border-accent-gold/50 rounded-3xl overflow-hidden flex flex-col justify-between p-6 sm:p-8 transition-all duration-500 hover:-translate-y-1.5 shadow-2xl hover:shadow-accent-gold/10 ${project.bentoSpan}`}
+          >
+            <!-- Background Image Blur Glow -->
+            <div class="absolute inset-0 z-0 overflow-hidden opacity-30 group-hover:opacity-50 transition-opacity duration-500">
+              <img
+                src={project.image}
+                alt={project.title}
+                class="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-700 ease-out"
+                onerror="this.style.display='none'"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent"></div>
+            </div>
+
+            <!-- Spotlight Glow Effect on Hover -->
+            <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_var(--mouse-x,50%)_var(--mouse-y,50%),rgba(237,187,0,0.15),transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+            <!-- Card Header: Category Badge & Status -->
+            <div class="relative z-10 flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full text-[11px] font-semibold tracking-wider uppercase bg-slate-900/90 border border-white/15 text-accent-gold shadow-md">
+                {project.category}
+              </span>
+              {project.featured && (
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase bg-accent-red/20 border border-accent-red/40 text-rose-300">
+                  <span class="w-1.5 h-1.5 rounded-full bg-accent-red animate-pulse"></span>
+                  Featured
+                </span>
+              )}
+            </div>
+
+            <!-- Card Content -->
+            <div class="relative z-10 mt-auto pt-8">
+              <span class="text-xs font-mono text-accent-gold/90 font-medium block mb-1">
+                {project.subtitle}
+              </span>
+              <h3 class="font-heading font-bold text-2xl text-white group-hover:text-accent-gold transition-colors tracking-tight mb-2">
+                {project.title}
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-300 line-clamp-2 leading-relaxed mb-4">
+                {project.description}
+              </p>
+
+              <!-- Tags / Tech Stack Badges -->
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                {project.tags.map((tag) => (
+                  <span class="px-2.5 py-0.5 rounded-md text-[10px] font-medium bg-slate-950/80 border border-white/10 text-slate-300">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <!-- Action Link -->
+              <div>
+                {hasLink ? (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-accent-red to-accent-red-dark hover:from-accent-red-dark hover:to-accent-red-deep text-white font-heading font-semibold text-xs shadow-lg shadow-accent-red/30 transition-all hover:scale-105"
+                  >
+                    <span>View Live Project</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                  </a>
+                ) : (
+                  <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-800/80 border border-white/10 text-slate-400 font-heading font-medium text-xs cursor-not-allowed">
+                    <svg class="w-3.5 h-3.5 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span>Prototype / Confidential</span>
+                  </span>
+                )}
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>
+
+<script>
+  // Mouse Spotlight Effect for Bento Cards
+  document.querySelectorAll('#projects .group').forEach((card) => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = (card as HTMLElement).getBoundingClientRect();
+      const x = (e as MouseEvent).clientX - rect.left;
+      const y = (e as MouseEvent).clientY - rect.top;
+      (card as HTMLElement).style.setProperty('--mouse-x', `${x}px`);
+      (card as HTMLElement).style.setProperty('--mouse-y', `${y}px`);
+    });
+  });
+</script>

@@ -1,0 +1,65 @@
+---
+import { portfolioData } from '@data/portfolioData';
+---
+
+<section id="about" class="py-24 relative px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto">
+    <!-- Section Header -->
+    <div class="flex flex-col items-center text-center mb-16">
+      <span class="text-xs font-heading font-semibold tracking-widest text-accent-gold uppercase mb-2">Philosophy & Background</span>
+      <h2 class="font-heading font-bold text-3xl sm:text-4xl text-white tracking-tight">About Me</h2>
+      <div class="w-12 h-1 bg-gradient-to-r from-accent-red to-accent-gold rounded-full mt-4"></div>
+    </div>
+
+    <!-- Main Content Card -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+      <!-- Bio Summary -->
+      <div class="lg:col-span-8 bg-slate-900/60 backdrop-blur-md border border-white/10 rounded-2xl p-8 sm:p-10 flex flex-col justify-between shadow-xl">
+        <div>
+          <h3 class="font-heading font-bold text-xl sm:text-2xl text-white mb-4">
+            Building Seamless Experiences with Code & Design
+          </h3>
+          <p class="text-slate-300 font-sans text-base sm:text-lg leading-relaxed mb-6">
+            {portfolioData.aboutDetailed}
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6 border-t border-white/10 text-sm">
+          <div class="flex items-center gap-3">
+            <div class="w-2 h-2 rounded-full bg-accent-gold"></div>
+            <span class="text-slate-400">Education:</span>
+            <span class="text-white font-medium">Information Systems</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-2 h-2 rounded-full bg-accent-red"></div>
+            <span class="text-slate-400">Industry Exp:</span>
+            <span class="text-white font-medium">PT Telkom Akses</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Core Focus Pillars -->
+      <div class="lg:col-span-4 flex flex-col gap-4">
+        <div class="flex-1 bg-slate-900/60 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:border-accent-gold/40 transition-colors">
+          <div class="w-10 h-10 rounded-xl bg-accent-gold/10 border border-accent-gold/20 flex items-center justify-center text-accent-gold font-heading font-bold text-lg mb-3">
+            01
+          </div>
+          <h4 class="font-heading font-bold text-lg text-white mb-1">Frontend Engineering</h4>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Crafting pixel-perfect, responsive, and performance-optimized web architectures using Astro, React, and Tailwind CSS.
+          </p>
+        </div>
+
+        <div class="flex-1 bg-slate-900/60 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:border-accent-red/40 transition-colors">
+          <div class="w-10 h-10 rounded-xl bg-accent-red/10 border border-accent-red/20 flex items-center justify-center text-accent-red font-heading font-bold text-lg mb-3">
+            02
+          </div>
+          <h4 class="font-heading font-bold text-lg text-white mb-1">UI/UX & Prototyping</h4>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Designing intuitive user journeys, wireframes, and high-fidelity interactive prototypes in Figma with a strong design system focus.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
